@@ -1,0 +1,13 @@
+# Cloudflare Pages 설정
+# 정적 빌드 출력 폴더
+name = "wemix-tower-run"
+pages_build_output_dir = "out"
+compatibility_date = "2024-11-01"
+
+# 온라인 랭킹용 KV 바인딩.
+# 1) Cloudflare 대시보드 또는 CLI로 KV 네임스페이스 생성:
+#      npx wrangler kv namespace create SCORES
+# 2) 출력된 id를 아래에 넣거나, Pages > Settings > Bindings 에서 SCORES 로 바인딩.
+# [[kv_namespaces]]
+# binding = "SCORES"
+# id = "여기에_KV_namespace_id"
