@@ -1,3 +1,5 @@
+/* eslint-disable */
+// @ts-nocheck
 /* ============================================================
    CharacterManager
    - 애니팡 프렌즈 캐릭터를 canvas에 절차적으로 렌더링.
@@ -5,7 +7,7 @@
    - 지원: panda(MAO), pig(PINKY), rabbit(ANI), dog(BLUE),
      monkey(MONGYI), cat(LUCY), bear(MICKY), bomb(PANG), chick(ARI)
    ============================================================ */
-class CharacterManager {
+export class CharacterManager {
   constructor(assets) {
     this.assets = assets;
     this.walkPhase = 0;

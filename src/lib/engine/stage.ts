@@ -1,3 +1,6 @@
+/* eslint-disable */
+// @ts-nocheck
+import { AssetManager } from './assets';
 /* ============================================================
    StageManager
    - 하나의 거대한 횡스크롤 월드를 렌더링.
@@ -7,7 +10,7 @@
      위메이드플레이 회사 요소를 배치.
    - 모든 요소는 월드좌표에 결정적으로 배치되어 카메라와 함께 스크롤.
    ============================================================ */
-class StageManager {
+export class StageManager {
   constructor(assets) {
     this.assets = assets;
     this.PPM = 42;          // pixels per meter (월드 스케일)

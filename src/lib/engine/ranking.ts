@@ -1,3 +1,5 @@
+/* eslint-disable */
+// @ts-nocheck
 /* ============================================================
    RankingManager
    - 온라인 실시간 랭킹. 더미 데이터 없음.
@@ -5,11 +7,11 @@
      같은 서버에 접속한 모든 유저의 기록이 실시간 공유·갱신된다.
    - 서버가 없으면(오프라인) 본인 기록만 표시하는 폴백.
    ============================================================ */
-class RankingManager {
+export class RankingManager {
   constructor() {
     // 백엔드 주소. 정적 호스팅(GitHub Pages 등)에선 window.WEMIX_API 로 외부
     // 백엔드 URL을 주입할 수 있고, 없으면 같은 오리진의 상대 경로를 사용한다.
-    this.api = (typeof window !== 'undefined' && window.WEMIX_API) ? window.WEMIX_API : 'api/scores';
+    this.api = (typeof window !== 'undefined' && window.WEMIX_API) ? window.WEMIX_API : '/api/scores';
     this.clientId = this._clientId();
     this.playerName = 'PLAYER';
     this.playerDist = 0;

@@ -1,9 +1,11 @@
+/* eslint-disable */
+// @ts-nocheck
 /* ============================================================
    SoundManager
    - WebAudio API로 BGM/효과음을 절차적으로 합성 (외부 파일 없음).
    - 밝고 중독성 있는 BGM 루프 + Perfect/넘어짐/버튼/기록갱신 SFX.
    ============================================================ */
-class SoundManager {
+export class SoundManager {
   constructor() {
     this.ctx = null;
     this.enabled = true;

@@ -1,3 +1,5 @@
+/* eslint-disable */
+// @ts-nocheck
 /* ============================================================
    PhysicsManager
    - Walk the Stork 스타일 "역진자(inverted pendulum)" 밸런스 물리.
@@ -6,7 +8,7 @@
      플레이어는 ← → 를 번갈아 눌러 반대 방향으로 밀어 균형 유지.
    - |balance| >= 1 이면 넘어짐(게임오버).
    ============================================================ */
-class PhysicsManager {
+export class PhysicsManager {
   constructor() {
     this.reset();
   }

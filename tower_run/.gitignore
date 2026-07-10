@@ -1,8 +1,0 @@
-# 런타임 랭킹 데이터 (서버 실행 시 생성)
-scores.json
-
-# 의존성/OS
-node_modules/
-.DS_Store
-Thumbs.db
-*.log

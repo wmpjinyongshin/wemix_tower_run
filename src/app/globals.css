@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --wemix-navy: #0a1a3f;
+  --wemix-blue: #1652f0;
+  --wemix-cyan: #22d3ee;
+  --wemade-orange: #ff7a1a;
+  --gold: #ffcf33;
+  --perfect: #35f0a0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #05060d;
+  color: #eaf2ff;
+  font-family: "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---------- 애니메이션 ---------- */
+@keyframes wtr-fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes wtr-pop { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes wtr-float { 0% { transform: translate(-50%, -50%); } 100% { transform: translate(-50%, calc(-50% - 12px)); } }
+@keyframes wtr-pulse { to { transform: scale(1.12); } }
+@keyframes wtr-rankup { 0% { transform: translateX(8px); background: rgba(53,240,160,0.4); } 100% { transform: translateX(0); } }
+
+.wtr-fade { animation: wtr-fadeIn 0.4s ease; }
+.wtr-pop { animation: wtr-pop 0.4s ease; }
+.wtr-float { animation: wtr-float 1.4s ease-in-out infinite alternate; }
+.wtr-pulse { animation: wtr-pulse 0.5s infinite alternate; }
+.wtr-rankup { animation: wtr-rankup 0.6s ease; }
+
+/* 텍스트 그라데이션 헬퍼 */
+.text-grad-cyan {
+  background: linear-gradient(90deg, var(--wemix-cyan), #fff);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.text-grad-gold {
+  background: linear-gradient(90deg, var(--gold), var(--wemade-orange));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.text-grad-red {
+  background: linear-gradient(90deg, #ff5a5a, var(--wemade-orange));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* WEMADE PLAY 워드마크 배지 */
+.logo-badge {
+  display: inline-block;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  padding: 5px 16px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, #0a1a3f, #16233f);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+  font-family: "Arial Black", "Segoe UI", sans-serif;
+  text-transform: uppercase;
+}
+.logo-badge .lp { color: var(--wemade-orange); }
+
+/* 버튼 */
+.btn { cursor: pointer; border: none; border-radius: 12px; font-weight: 800; transition: transform .12s ease, filter .2s, box-shadow .2s; }
+.btn:active { transform: scale(0.95); }
+.btn-primary { background: linear-gradient(135deg, var(--wemix-blue), var(--wemix-cyan)); color: #fff; box-shadow: 0 8px 24px rgba(22,82,240,0.45); }
+.btn-primary:hover { filter: brightness(1.1); box-shadow: 0 10px 30px rgba(34,211,238,0.55); }
+.btn-ghost { background: rgba(255,255,255,0.08); color: #eaf2ff; border: 1px solid rgba(88,160,255,0.35); }
+.btn-ghost:hover { background: rgba(255,255,255,0.16); }
+
+.panel { background: rgba(10,20,45,0.82); border: 1px solid rgba(88,160,255,0.35); backdrop-filter: blur(6px); }
